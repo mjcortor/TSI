@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+
+from odoo import models, fields, api
+
+class Incidencias(models.Model):
+    _name = 'municitic.incidencias'
+    _description = 'Municitic Incidencias'
+    name = fields.Char(string="Nombre", required=True, help="nombre de la incidencia")
+    description = fields.Text()
+    ubicacion = fields.Text()
+    start = fields.Datetime('Fecha y Hora',required=True, autodate = True)
+    activityType = fields.Selection([('urbanistico','Urbanístico'),
+                                    ('emergencia','Emergencia'),
+                                    ('trafico','Tráfico'),],
+                                    'Tipo de incidencia')

@@ -1,0 +1,14 @@
+<odoo>
+  <!-- Top menu item -->
+  <menuitem name="Municitic" id="main_municitic_menu" groups="group_municitic_manager"/>
+
+  <!-- menu categories -->
+  <menuitem name="Municitic" id="municitic_menu" groups="group_municitic_manager" parent="main_municitic_menu"/>
+
+  <!-- actions -->
+  <menuitem name="Incidencias" id="incidencias_menu" parent="municitic_menu" groups="group_municitic_manager" action="incidencias_list_action"/>
+  <menuitem name="Citas" id="citas_menu" parent="municitic_menu" groups="group_municitic_manager" action="citas_list_action"/>
+  <menuitem name="Usuarios" id="usuarios_menu" parent="municitic_menu" groups="group_municitic_manager" action="usuarios_list_action"/>
+  <menuitem name="Valoraciones" id="valoraciones_menu" parent="municitic_menu" groups="group_municitic_manager" action="valoraciones_list_action"/>
+  <menuitem name="Trabajadores" id="trabajadores_menu" parent="municitic_menu" groups="group_municitic_manager" action="trabajadores_list_action"/>
+</odoo>

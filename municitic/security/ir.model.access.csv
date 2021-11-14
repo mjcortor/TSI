@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+incidencias_manager,incidencias_manager,model_municitic_incidencias,group_municitic_manager,1,1,1,1
+citas_manager,citas_manager,model_municitic_citas,group_municitic_manager,1,1,1,1
+usuarios_manager,usuarios_manager,model_municitic_usuarios,group_municitic_manager,1,1,1,1
+valoraciones_manager,valoraciones_manager,model_municitic_valoraciones,group_municitic_manager,1,1,1,1
+trabajadores_manager,trabajadores_manager,model_municitic_trabajadores,group_municitic_manager,1,1,1,1

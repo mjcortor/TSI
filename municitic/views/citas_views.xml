@@ -1,0 +1,68 @@
+<odoo>
+
+  <!--FORM-->
+  <record id="municitic_citas_form_view" model="ir.ui.view">
+    <field name="name">municitic.citas.form</field>
+    <field name="model">municitic.citas</field>
+    <field name="arch" type="xml">
+      <form string="Citas">
+        <sheet layout="auto">
+          <group>
+            <field name="titulo" />
+            <field name="start" />
+            <field name="end" />
+            <field name="asistentes" />
+            <field name="tipoCita" />
+            <field name="trabajadores_ids" widget="many2one" />
+            <field name="usuarios_ids" >
+              <tree>
+                <field name="nombre" />
+                <field name="dni" />
+                <field name="usuario" />
+              </tree>
+            </field>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!--TREE-->
+  <record id="municitic_citas_tree_view" model="ir.ui.view">
+    <field name="name">municitic.citas.tree</field>
+    <field name="model">municitic.citas</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="titulo" />
+        <field name="description" />
+        <field name="asistentes" />
+        <field name="start" />
+        <field name="end" />
+        <field name="tipoCita" />
+        <field name="trabajadores_ids" widget="many2one" />
+        <field name="usuarios_ids" widget="many2many" />
+      </tree>
+    </field>
+  </record>
+
+  <!--CALENDAR-->
+  <record id="municitic_citas_calendar_view" model="ir.ui.view">
+    <field name="name">municitic.citas.calendar</field>
+    <field name="model">municitic.citas</field>
+    <field name="arch" type="xml">
+      <calendar string="Citas" color="tipoCita" date_start="start" date_stop="end" mode="month">
+        <field name="titulo" />
+      </calendar>
+    </field>
+  </record>
+
+    <record id="citas_list_action" model="ir.actions.act_window">
+    <field name="name">Citas</field>
+    <field name="res_model">municitic.citas</field>
+    <field name="view_mode">tree,form,calendar</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Create the first class</p>
+    </field>
+  </record>
+  
+</odoo>
