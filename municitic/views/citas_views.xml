@@ -8,7 +8,7 @@
       <form string="Citas">
         <sheet layout="auto">
           <group>
-            <field name="titulo" />
+            <field name="name" />
             <field name="start" />
             <field name="end" />
             <field name="asistentes" />
@@ -33,7 +33,7 @@
     <field name="model">municitic.citas</field>
     <field name="arch" type="xml">
       <tree string="tree_string">
-        <field name="titulo" />
+        <field name="name" />
         <field name="description" />
         <field name="asistentes" />
         <field name="start" />
@@ -51,7 +51,7 @@
     <field name="model">municitic.citas</field>
     <field name="arch" type="xml">
       <calendar string="Citas" color="tipoCita" date_start="start" date_stop="end" mode="month">
-        <field name="titulo" />
+        <field name="name" />
       </calendar>
     </field>
   </record>

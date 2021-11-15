@@ -5,7 +5,7 @@ from odoo import models, fields, api
 class Citas(models.Model):
     _name = 'municitic.citas'
     _description = 'Municitic Citas'
-    titulo = fields.Char(string="Titulo", required=True, help="nombre de la cita")
+    name = fields.Char(string="Titulo", required=True, help="nombre de la cita")
     description = fields.Text()
     asistentes = fields.Integer("Numero de asistentes")
     start = fields.Datetime('Comienza',required=True, autodate = True)
