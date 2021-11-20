@@ -31,6 +31,8 @@
         'views/usuarios_views.xml',
         'views/valoraciones_views.xml',
         'views/trabajadores_views.xml',
+        'views/comunicados_views.xml',
+        'views/tipotrabajador_views.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

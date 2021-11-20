@@ -13,3 +13,6 @@ class Incidencias(models.Model):
                                     ('emergencia','Emergencia'),
                                     ('trafico','Tráfico'),],
                                     'Tipo de incidencia')
+    valoraciones_ids = fields.One2many("municitic.valoraciones","incidencias_ids","Valoracion confirmada")
+    trabajadores_ids = fields.Many2many("municitic.trabajadores",string="Trabajadores confirmados")
+    usuarios_ids = fields.Many2one("municitic.usuarios",string="Usuarios confirmados")

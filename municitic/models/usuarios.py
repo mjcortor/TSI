@@ -10,4 +10,7 @@ class Usuarios(models.Model):
     usuario = fields.Char(string="Usuario", required=True, help="usuario")
     direccion = fields.Text()
     photo=fields.Binary('Photo')
+    
     citas_ids = fields.Many2many("municitic.citas",string="Cita confirmada")
+    incidencias_ids = fields.One2many("municitic.incidencias","usuarios_ids","Incidencia confirmada")
+    comunicados_ids = fields.Many2many("municitic.comunicados",string="Comunicado confirmado")

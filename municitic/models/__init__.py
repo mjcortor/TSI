@@ -5,3 +5,5 @@ from . import citas
 from . import usuarios
 from . import valoraciones
 from . import trabajadores
+from . import comunicados
+from . import tipotrabajador
