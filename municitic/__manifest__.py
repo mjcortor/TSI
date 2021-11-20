@@ -7,7 +7,7 @@
         subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        Long description of module's purpose
+        Long description of module's purposekkkkkkkk
     """,
 
     'author': "My Company",
@@ -31,6 +31,8 @@
         'views/usuarios_views.xml',
         'views/valoraciones_views.xml',
         'views/trabajadores_views.xml',
+        'views/comunicados_views.xml',
+        'views/tipotrabajador_views.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

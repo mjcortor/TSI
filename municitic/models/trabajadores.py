@@ -14,4 +14,7 @@ class Trabajadores(models.Model):
                                     ('concejal','Concejal'),],
                                     'Tipo de trabajador')
     photo=fields.Binary('Photo')
-    citas_ids = fields.One2many("municitic.citas",string="Cita confirmada")
+    
+    citas_ids = fields.One2many("municitic.citas","trabajadores_ids","Cita confirmada")
+    incidencias_ids = fields.Many2many("municitic.incidencias",string="Incidencias confirmados")
+    tipotrabajador_ids = fields.One2many("municitic.tipotrabajador","trabajadores_ids","Tipo Trabajador confirmado")
