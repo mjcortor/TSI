@@ -9,12 +9,8 @@ class Trabajadores(models.Model):
     dni = fields.Char(string="DNI", required=True, help="dni")
     usuario = fields.Char(string="Usuario", required=True, help="usuario")
     direccion = fields.Text()
-    tipoTrabajador = fields.Selection([('mantenimiento','Mantenimiento'),
-                                    ('recepcion','Recepcion'),
-                                    ('concejal','Concejal'),],
-                                    'Tipo de trabajador')
     photo=fields.Binary('Photo')
     
     citas_ids = fields.One2many("municitic.citas","trabajadores_ids","Cita confirmada")
     incidencias_ids = fields.Many2many("municitic.incidencias",string="Incidencias confirmados")
-    tipotrabajador_ids = fields.One2many("municitic.tipotrabajador","trabajadores_ids","Tipo Trabajador confirmado")
+    tipotrabajador_ids = fields.Many2one("municitic.tipotrabajador",string="Tipo Trabajador confirmado")
