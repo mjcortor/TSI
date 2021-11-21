@@ -5,7 +5,7 @@ from odoo import models, fields, api
 class tipotrabajador(models.Model):
     _name = 'municitic.tipotrabajador'
     _description = 'Municitic Trabajador'
-    tipoTrabajador = fields.Selection([('politico','Politico'),
+    name = fields.Selection([('politico','Politico'),
                                     ('personal_laboral','Personal laboral'),
                                     ('personal_eventual','Personal eventual'),
                                     ('personal_funcionario','Personal funcionario'),],
