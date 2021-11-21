@@ -14,6 +14,7 @@
             <field name="asistentes" />
             <field name="tipoCita" />
             <field name="trabajadores_ids" widget="many2one" />
+            <field name="valoraciones_ids" widget="many2one" />
             <field name="usuarios_ids" >
               <tree>
                 <field name="nombre" />
@@ -40,6 +41,7 @@
         <field name="end" />
         <field name="tipoCita" />
         <field name="trabajadores_ids" widget="many2one" />
+        <field name="valoraciones_ids" widget="many2one" />
         <field name="usuarios_ids" widget="many2many" />
       </tree>
     </field>
