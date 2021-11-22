@@ -14,3 +14,4 @@ class Comunicados(models.Model):
     usuarios_ids = fields.Many2many("municitic.usuarios",string="Usuario confirmado")
     tipotrabajador_ids = fields.Many2one("municitic.tipotrabajador",string="Tipo Trabajador confirmado")
     valoraciones_ids = fields.Many2one("municitic.valoraciones",string="Valoraciones confirmadas")
+    
