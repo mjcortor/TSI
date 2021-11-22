@@ -1,4 +1,37 @@
 <odoo>
+
+  <!--FORM-->
+  <record id="municitic_comunicados_form_view" model="ir.ui.view">
+    <field name="name">municitic.comunicados.form</field>
+    <field name="model">municitic.comunicados</field>
+    <field name="arch" type="xml">
+      <form string="Comunicados">
+        <sheet layout="auto">
+          <group>
+            <field name="name" />
+            <field name="tipoComunicado" />
+            <field name="tipotrabajador_ids" widget="many2one" />
+            <field name="valoraciones_ids" widget="many2one" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!--TREE-->
+  <record id="municitic_comunicados_tree_view" model="ir.ui.view">
+    <field name="name">municitic.comunicados.tree</field>
+    <field name="model">municitic.comunicados</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name" />
+        <field name="tipoComunicado" />
+        <field name="tipotrabajador_ids" widget="many2one" />
+        <field name="valoraciones_ids" widget="many2one" />
+      </tree>
+    </field>
+  </record>
+
   <record id="comunicados_list_action" model="ir.actions.act_window">
     <field name="name">Comunicados</field>
     <field name="res_model">municitic.comunicados</field>
