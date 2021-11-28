@@ -1,0 +1,51 @@
+<odoo>
+    <!--FORM-->
+  <record id="municitic_cursos_form_view" model="ir.ui.view">
+    <field name="name">municitic.cursos.form</field>
+    <field name="model">municitic.cursos</field>
+    <field name="arch" type="xml">
+      <form string="Cursos">
+        <sheet layout="auto">
+          <group>
+            <field name="name" />
+            <field name="description" />
+            <field name="asistentes" />
+            <field name="start" />
+            <field name="end" />
+            <field name="tipoCurso" />
+            <field name="trabajadores_ids" widget="many2many">
+              <tree>
+                <field name="dni" />
+                <field name="nombre" />               
+              </tree>
+            </field>           
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!--TREE-->
+  <record id="municitic_cursos_tree_view" model="ir.ui.view">
+    <field name="name">municitic.cursos.tree</field>
+    <field name="model">municitic.cursos</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name" />
+        <field name="description" />
+        <field name="asistentes" />
+        <field name="start" />
+        <field name="end" />
+        <field name="tipoCurso" />
+      </tree>
+    </field>
+  </record>
+    <record id="cursos_list_action" model="ir.actions.act_window">
+        <field name="name">Cursos</field>
+        <field name="res_model">municitic.cursos</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create the first class</p>
+        </field>
+    </record>
+</odoo>

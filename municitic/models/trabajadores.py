@@ -14,3 +14,5 @@ class Trabajadores(models.Model):
     citas_ids = fields.One2many("municitic.citas","trabajadores_ids","Cita confirmada")
     incidencias_ids = fields.Many2many("municitic.incidencias",string="Incidencias confirmados")
     tipotrabajador_ids = fields.Many2one("municitic.tipotrabajador",string="Tipo Trabajador confirmado")
+    cursos_ids = fields.Many2many("municitic.cursos",string="Cursos confirmados")
+

@@ -7,3 +7,4 @@ from . import valoraciones
 from . import trabajadores
 from . import comunicados
 from . import tipotrabajador
+from . import cursos

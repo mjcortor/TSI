@@ -6,3 +6,4 @@ valoraciones_manager,valoraciones_manager,model_municitic_valoraciones,group_mun
 trabajadores_manager,trabajadores_manager,model_municitic_trabajadores,group_municitic_manager,1,1,1,1
 comunicados_manager,comunicados_manager,model_municitic_comunicados,group_municitic_manager,1,1,1,1
 tipotrabajador_manager,tipotrabajador_manager,model_municitic_tipotrabajador,group_municitic_manager,1,1,1,1
+cursos_manager,cursos_manager,model_municitic_cursos,group_municitic_manager,1,1,1,1

@@ -13,4 +13,6 @@
   <menuitem name="Trabajadores" id="trabajadores_menu" parent="municitic_menu" groups="group_municitic_manager" action="trabajadores_list_action"/>
   <menuitem name="Comunicados" id="comunicados_menu" parent="municitic_menu" groups="group_municitic_manager" action="comunicados_list_action"/>
   <menuitem name="Tipo de trabajador" id="tipotrabajador_menu" parent="municitic_menu" groups="group_municitic_manager" action="tipotrabajador_list_action"/>
+  <menuitem name="Cursos" id="cursos_menu" parent="municitic_menu" groups="group_municitic_manager" action="cursos_list_action"/>
+
 </odoo>
