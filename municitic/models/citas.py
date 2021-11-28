@@ -16,4 +16,4 @@ class Citas(models.Model):
                                     'Tipo de cita')
     usuarios_ids = fields.Many2many("municitic.usuarios",string="Usuarios confirmados")
     trabajadores_ids = fields.Many2one("municitic.trabajadores",string="Trabajadores confirmados")
-    valoraciones_ids = fields.Many2one("municitic.valoraciones",string="Valoraciones confirmadas")
+    valoraciones_ids = fields.One2many("municitic.valoraciones","citas_ids","Valoraciones confirmadas")
