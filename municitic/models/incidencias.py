@@ -10,7 +10,7 @@ class Incidencias(models.Model):
     ubicacion = fields.Text()
     start = fields.Datetime('Fecha y Hora',required=True, autodate = True)
     end = fields.Datetime('Fecha y Hora',required=True, autodate = True)   
-    activityType = fields.Selection([('urbanistico','Urbanístico'),
+    activityType = fields.Selection([('urbanistico','Urbanístico'),#tipo incidencia renombrar
                                     ('emergencia','Emergencia'),
                                     ('trafico','Tráfico'),],
                                     'Tipo de incidencia')
