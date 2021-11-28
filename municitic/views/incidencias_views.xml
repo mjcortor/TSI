@@ -55,18 +55,18 @@
 
  <!--Pivot-->
 
-  <!--<record id="municitic_incidencias_pivot_view" model="ir.ui.view">
+  <record id="municitic_incidencias_pivot_view" model="ir.ui.view">
     <field name="name">municitic.incidencias.pivot</field>
     <field name="model">municitic.incidencias</field>
     <field name="arch" type="xml" >
       <pivot string = "Incidencias" >
-        <field name="pages_count" type = "measure"/>
-        <field name = "is_classic" type = "row" />
-        <field name = "author" type ="colum" />
-        <field name = "calendar" type = "month" />
+        <!--<field name="name" type = "measure"/>-->
+        <field name = "activityType" type = "row" />
+        <field name = "trabajadores_ids" type ="colum" />
+        <field name = "start" type = "month" />
       </pivot>
     </field>
-  </record>-->
+  </record>
 
   
 
@@ -75,7 +75,7 @@
   <record id="incidencias_list_action" model="ir.actions.act_window">
     <field name="name">Incidencias</field>
     <field name="res_model">municitic.incidencias</field>
-    <field name="view_mode">tree,form,calendar</field><!-- hay que agregar clase pivot cuando funcione-->
+    <field name="view_mode">tree,form,calendar,pivot</field><!-- hay que agregar clase pivot cuando funcione-->
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">Create the first class</p>
     </field>
