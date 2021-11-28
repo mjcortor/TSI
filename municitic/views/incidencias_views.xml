@@ -1,10 +1,84 @@
 <odoo>
+  <!--FORM-->
+
+  <record id="municitic_incidencias_form_view" model="ir.ui.view">
+    <field name="name">municitic.incidencias.form</field>
+    <field name="model">municitic.incidencias</field>
+    <field name="arch" type="xml">
+      <form string="Incidencias">
+        <sheet layout="auto">
+         <group>
+            <field name="name" />
+            <field name="description" />
+            <field name="ubicacion" />
+            <field name="start" />
+            <field name="end" />
+            <field name="activityType" />
+            <field name="valoraciones_ids" widget="many2one"/>
+            <field name="trabajadores_ids" widget="many2many"/>
+            <field name="usuarios_ids" widget="many2one" />
+          </group>
+        </sheet>
+      </form>
+    </field> 
+  </record>
+
+  <!--TREE-->
+  <record id="municitic_incidencias_tree_view" model="ir.ui.view">
+    <field name="name">municitic.incidencias.tree</field>
+    <field name="model">municitic.incidencias</field>
+    <field name="arch" type="xml">
+       <tree string="tree_string">
+            <field name="name" />
+            <field name="description" />
+            <field name="ubicacion" />
+            <field name="start" />
+            <field name="end" />
+            <field name="activityType" />
+            <field name="valoraciones_ids" widget="many2one"/>
+            <field name="trabajadores_ids" widget="many2many"/>
+            <field name="usuarios_ids" widget="many2one" />
+        </tree>
+    </field>
+  </record>
+  
+  <!--Calendario-->
+  <record id="municitic_incidencias_calendar_view" model="ir.ui.view">
+    <field name="name">municitic.incidencias.calendar</field>
+    <field name="model">municitic.incidencias</field>
+    <field name="arch" type="xml" >
+       <calendar string="Incidencias" color="activityType" date_start="start" date_stop="end" mode="month" >
+          <field name="name" />
+      </calendar>  
+    </field> 
+  </record>
+
+ <!--Pivot-->
+
+  <!--<record id="municitic_incidencias_pivot_view" model="ir.ui.view">
+    <field name="name">municitic.incidencias.pivot</field>
+    <field name="model">municitic.incidencias</field>
+    <field name="arch" type="xml" >
+      <pivot string = "Incidencias" >
+        <field name="pages_count" type = "measure"/>
+        <field name = "is_classic" type = "row" />
+        <field name = "author" type ="colum" />
+        <field name = "calendar" type = "month" />
+      </pivot>
+    </field>
+  </record>-->
+
+  
+
+
+
   <record id="incidencias_list_action" model="ir.actions.act_window">
     <field name="name">Incidencias</field>
     <field name="res_model">municitic.incidencias</field>
-    <field name="view_mode">tree,form</field>
+    <field name="view_mode">tree,form,calendar</field><!-- hay que agregar clase pivot cuando funcione-->
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">Create the first class</p>
     </field>
   </record>
+
 </odoo>
