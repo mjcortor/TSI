@@ -1,4 +1,48 @@
 <odoo>
+
+     <!--FORM-->
+     <record id="municitic_trabajadores_form_view" model="ir.ui.view">
+      <field name="name">municitic.trabajadores.form</field>
+      <field name="model">municitic.trabajadores</field>
+      <field name="arch" type="xml">
+        <form string="Trabajadores">
+          <sheet layout="auto">
+            <group>
+              <field name="nombre" />
+              <field name="dni" />
+              <field name="usuario" />
+              <field name="direccion" />
+              <field name="photo" />
+              <field name="citas_ids" widget="one2many" />              
+              <field name="incidencias_ids" >
+              <tree>
+                <field name="name" />
+                <field name="description" />
+              </tree>
+              </field>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    
+    <!--TREE-->
+    <record id="municitic_trabajadores_tree_view" model="ir.ui.view">
+      <field name="name">municitic.trabajadores.tree</field>
+      <field name="model">municitic.trabajadores</field>
+      <field name="arch" type="xml">
+        <tree string="tree_string">
+          <field name="nombre" />
+          <field name="dni" />
+          <field name="usuario" />
+          <field name="direccion" />
+          <field name="photo" />
+                    
+        </tree>
+      </field>
+    </record>
+
+
   <record id="trabajadores_list_action" model="ir.actions.act_window">
     <field name="name">Trabajadores</field>
     <field name="res_model">municitic.trabajadores</field>

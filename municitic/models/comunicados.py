@@ -7,7 +7,7 @@ class Comunicados(models.Model):
     _description = 'Municitic Comunicados'
     name = fields.Char(string="Titulo", required=True, help="nombre del comunicado")
     descripcion = fields.Text()
-    start = fields.Datetime('Comienza',required=True, autodate = True)   
+    emision = fields.Datetime('Emision',required=True, autodate = True)   
     tipoComunicado = fields.Selection([('noticia','Noticia'),
                                     ('actividad','Actividad'),],
                                     'Tipo de comunicado')
