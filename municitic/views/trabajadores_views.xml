@@ -38,6 +38,7 @@
         <field name="direccion" />
         <field name="photo" />
         <field name="nIncidencias" />
+        <field name="citas_ids" />
       </tree>
     </field>
   </record>
@@ -50,15 +51,29 @@
       <pivot string="Trabajadores">
         <field name="nIncidencias" type="measure"/>
         <field name="dni" type="row"/>
-        <!--<field name="dni" type="col"/>-->
       </pivot>
+    </field>
+  </record>
+
+  <!--SEARCH-->
+  <record id="municitic_trabajadores_search_view" model="ir.ui.view">
+    <field name="name">municitic.trabajadores.search</field>
+    <field name="model">municitic.trabajadores</field>
+    <field name="arch" type="xml">
+      <search>
+        <filter name="search_nIncidencias" string="nIncidencias > 2" domain="[('nIncidencias','>',2)]" />
+        <separator orientation="vertical" />
+        <group expand="0" string="Agrupar por...">
+          <filter name="group_by_tipotrabajador" string="tipotrabajador" context="{'group_by':'tipotrabajador_ids'}" />
+        </group>
+      </search>
     </field>
   </record>
 
   <record id="trabajadores_list_action" model="ir.actions.act_window">
     <field name="name">Trabajadores</field>
     <field name="res_model">municitic.trabajadores</field>
-    <field name="view_mode">tree,form,pivot</field>
+    <field name="view_mode">tree,form,pivot,search</field>
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">Create the first class</p>
     </field>
