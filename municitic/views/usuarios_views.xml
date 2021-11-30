@@ -8,7 +8,7 @@
       <form string="Usuarios">
         <sheet layout="auto">
           <group>
-            <field name="nombre" />
+            <field name="name" />
             <field name="dni" />
             <field name="usuario" />
             <field name="direccion" />
@@ -39,7 +39,7 @@
     <field name="model">municitic.usuarios</field>
     <field name="arch" type="xml">
       <tree string="tree_string">
-        <field name="nombre" />
+        <field name="name" />
         <field name="dni" />
         <field name="usuario" />
         <field name="direccion" />

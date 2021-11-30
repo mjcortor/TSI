@@ -17,7 +17,7 @@
             <field name="valoraciones_ids" widget="many2one" />
             <field name="usuarios_ids">
               <tree>
-                <field name="nombre" />
+                <field name="name" />
                 <field name="dni" />
                 <field name="usuario" />
               </tree>
