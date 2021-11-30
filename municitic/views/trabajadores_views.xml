@@ -8,12 +8,17 @@
       <form string="Trabajadores">
         <sheet layout="auto">
           <group>
-            <field name="nombre" />
+            <field name="name" />
             <field name="dni" />
             <field name="usuario" />
             <field name="direccion" />
             <field name="photo" />
-            <field name="citas_ids" widget="one2many" />
+            <field name="citas_ids" widget="one2many" >
+              <tree>
+                <field name="name" />
+                <field name="description" />
+              </tree>
+            </field>
             <field name="incidencias_ids">
               <tree>
                 <field name="name" />
@@ -32,13 +37,12 @@
     <field name="model">municitic.trabajadores</field>
     <field name="arch" type="xml">
       <tree string="tree_string">
-        <field name="nombre" />
+        <field name="name" />
         <field name="dni" />
         <field name="usuario" />
         <field name="direccion" />
         <field name="photo" />
         <field name="nIncidencias" />
-        <field name="citas_ids" />
       </tree>
     </field>
   </record>

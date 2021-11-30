@@ -16,7 +16,7 @@
             <field name="trabajadores_ids" widget="many2many">
               <tree>
                 <field name="dni" />
-                <field name="nombre" />               
+                <field name="name" />               
               </tree>
             </field>           
           </group>

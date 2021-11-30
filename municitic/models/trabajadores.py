@@ -5,7 +5,7 @@ from odoo import models, fields, api
 class Trabajadores(models.Model):
     _name = 'municitic.trabajadores'
     _description = 'Municitic Trabajadores'
-    nombre = fields.Char(string="Nombre", required=True, help="nombre completo")
+    name = fields.Char(string="Nombre", required=True, help="nombre completo")
     dni = fields.Char(string="DNI", required=True, help="dni")
     usuario = fields.Char(string="Usuario", required=True, help="usuario")
     direccion = fields.Text()
