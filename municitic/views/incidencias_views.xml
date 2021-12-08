@@ -6,11 +6,6 @@
     <field name="model">municitic.incidencias</field>
     <field name="arch" type="xml">
       <form string="Incidencias">
-      <header>
-          <button name="btn_submit_to_resuelta" string="Resuelta" type="object" class="oe_highlight" />
-          <button name="btn_submit_to_cancelada" string="Cancelar" type="object" class="oe_highlight" />
-          <button name="btn_submit_to_encurso" string="En Curso" type="object" class="oe_highlight" />
-        </header>
         <sheet layout="auto">
          <group>
             <field name="name" />
@@ -19,7 +14,6 @@
             <field name="start" />
             <field name="end" />
             <field name="activityType" />
-            <field name="estado" widget="statusbar" />
             <field name="valoraciones_ids" widget="many2one"/>
             <field name="trabajadores_ids" widget="many2many"/>
             <field name="usuarios_ids" widget="many2one" />
@@ -41,7 +35,6 @@
             <field name="start" />
             <field name="end" />
             <field name="activityType" />
-            <field name="estado" />
             <field name="valoraciones_ids" widget="many2one"/>
             <field name="usuarios_ids" widget="many2one" />
         </tree>
