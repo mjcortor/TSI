@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- E2. Esquema basico -->
+    <report id="action_municitic_report_trabajadores" string="Report" model="municitic.trabajadores" report_type="qweb-pdf" name="municitic.report_trabajadores" />
+
+</odoo>
+    

@@ -13,6 +13,7 @@
             <field name="usuario" />
             <field name="direccion" />
             <field name="photo" />
+            <field name="tipotrabajador_ids" widget="many2one" />
             <field name="citas_ids" widget="one2many" >
               <tree>
                 <field name="name" />

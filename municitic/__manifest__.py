@@ -26,6 +26,8 @@
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
+        'reports/reports.xml',
+        'reports/trabajadores_report.xml',
         'views/incidencias_views.xml',
         'views/citas_views.xml',
         'views/usuarios_views.xml',
