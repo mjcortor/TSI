@@ -7,6 +7,7 @@ class Comunicados(models.Model):
     _description = 'Municitic Comunicados'
     name = fields.Char(string="Titulo", required=True, help="nombre del comunicado")
     descripcion = fields.Text()
+    emision = fields.Datetime('Emision',required=True, autodate = True)   
     tipoComunicado = fields.Selection([('noticia','Noticia'),
                                     ('actividad','Actividad'),],
                                     'Tipo de comunicado')
@@ -14,3 +15,4 @@ class Comunicados(models.Model):
     usuarios_ids = fields.Many2many("municitic.usuarios",string="Usuario confirmado")
     tipotrabajador_ids = fields.Many2one("municitic.tipotrabajador",string="Tipo Trabajador confirmado")
     valoraciones_ids = fields.Many2one("municitic.valoraciones",string="Valoraciones confirmadas")
+    

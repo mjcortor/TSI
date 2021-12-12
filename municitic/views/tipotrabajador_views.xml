@@ -1,8 +1,51 @@
 <odoo>
+
+<!--FORM-->
+  <record id="municitic_tipotrabajador_form_view" model="ir.ui.view">
+    <field name="name">municitic.tipotrabajador.form</field>
+    <field name="model">municitic.tipotrabajador</field>
+    <field name="arch" type="xml">
+      <form string="Tipo Trabajador">
+        <sheet layout="auto">
+          <group>
+            <field name="name" />
+            <field name="nComunicados" />
+            <field name="trabajadores_ids" widget="one2many" />
+            <field name="comunicados_ids" widget="one2many" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!--TREE-->
+  <record id="municitic_tipotrabajador_tree_view" model="ir.ui.view">
+    <field name="name">municitic.tipotrabajador.tree</field>
+    <field name="model">municitic.tipotrabajador</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name" />
+        <field name="nComunicados" />
+      </tree>
+    </field>
+  </record>
+
+<!--GRAPH Vista avanzada-->
+  <record id="municitic_tipotrabajador_graph_view" model="ir.ui.view">
+    <field name="name">municitic.tipotrabajador.graph</field>
+    <field name="model">municitic.tipotrabajador</field>
+    <field name="arch" type="xml">
+      <graph string="Tipo de trabajador" type="pie">
+        <field name="name" />
+        <field name="nComunicados" type="measure" />
+      </graph>
+    </field>
+  </record>
+
   <record id="tipotrabajador_list_action" model="ir.actions.act_window">
     <field name="name">Tipo de trabajador</field>
     <field name="res_model">municitic.tipotrabajador</field>
-    <field name="view_mode">tree,form</field>
+    <field name="view_mode">tree,form,graph</field>
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">Create the first class</p>
     </field>

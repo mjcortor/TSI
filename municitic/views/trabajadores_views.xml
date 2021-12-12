@@ -1,8 +1,83 @@
 <odoo>
+
+  <!--FORM-->
+  <record id="municitic_trabajadores_form_view" model="ir.ui.view">
+    <field name="name">municitic.trabajadores.form</field>
+    <field name="model">municitic.trabajadores</field>
+    <field name="arch" type="xml">
+      <form string="Trabajadores">
+        <sheet layout="auto">
+          <group>
+            <field name="name" />
+            <field name="dni" />
+            <field name="usuario" />
+            <field name="direccion" />
+            <field name="photo" />
+            <field name="citas_ids" widget="one2many" >
+              <tree>
+                <field name="name" />
+                <field name="description" />
+              </tree>
+            </field>
+            <field name="incidencias_ids">
+              <tree>
+                <field name="name" />
+                <field name="description" />
+              </tree>
+            </field>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!--TREE-->
+  <record id="municitic_trabajadores_tree_view" model="ir.ui.view">
+    <field name="name">municitic.trabajadores.tree</field>
+    <field name="model">municitic.trabajadores</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name" />
+        <field name="dni" />
+        <field name="usuario" />
+        <field name="direccion" />
+        <field name="photo" />
+        <field name="nIncidencias" />
+      </tree>
+    </field>
+  </record>
+
+  <!--PIVOT-->
+  <record id="municitic_trabajadores_pivot_view" model="ir.ui.view">
+    <field name="name">municitic.trabajadores.pivot</field>
+    <field name="model">municitic.trabajadores</field>
+    <field name="arch" type="xml">
+      <pivot string="Trabajadores">
+        <field name="nIncidencias" type="measure"/>
+        <field name="dni" type="row"/>
+      </pivot>
+    </field>
+  </record>
+
+  <!--SEARCH-->
+  <record id="municitic_trabajadores_search_view" model="ir.ui.view">
+    <field name="name">municitic.trabajadores.search</field>
+    <field name="model">municitic.trabajadores</field>
+    <field name="arch" type="xml">
+      <search>
+        <filter name="search_nIncidencias" string="nIncidencias > 2" domain="[('nIncidencias','>',2)]" />
+        <separator orientation="vertical" />
+        <group expand="0" string="Agrupar por...">
+          <filter name="group_by_tipotrabajador" string="tipotrabajador" context="{'group_by':'tipotrabajador_ids'}" />
+        </group>
+      </search>
+    </field>
+  </record>
+
   <record id="trabajadores_list_action" model="ir.actions.act_window">
     <field name="name">Trabajadores</field>
     <field name="res_model">municitic.trabajadores</field>
-    <field name="view_mode">tree,form</field>
+    <field name="view_mode">tree,form,pivot,search</field>
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">Create the first class</p>
     </field>

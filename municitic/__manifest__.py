@@ -33,6 +33,7 @@
         'views/trabajadores_views.xml',
         'views/comunicados_views.xml',
         'views/tipotrabajador_views.xml',
+        'views/cursos_views.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

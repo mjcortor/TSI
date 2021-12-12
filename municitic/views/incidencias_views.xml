@@ -6,6 +6,11 @@
     <field name="model">municitic.incidencias</field>
     <field name="arch" type="xml">
       <form string="Incidencias">
+      <header>
+          <button name="btn_submit_to_resuelta" string="Resuelta" type="object" class="oe_highlight" />
+          <button name="btn_submit_to_cancelada" string="Cancelar" type="object" class="oe_highlight" />
+          <button name="btn_submit_to_encurso" string="En Curso" type="object" class="oe_highlight" />
+        </header>
         <sheet layout="auto">
          <group>
             <field name="name" />
@@ -14,6 +19,7 @@
             <field name="start" />
             <field name="end" />
             <field name="activityType" />
+            <field name="estado" widget="statusbar" />
             <field name="valoraciones_ids" widget="many2one"/>
             <field name="trabajadores_ids" widget="many2many"/>
             <field name="usuarios_ids" widget="many2one" />
@@ -35,8 +41,8 @@
             <field name="start" />
             <field name="end" />
             <field name="activityType" />
+            <field name="estado" />
             <field name="valoraciones_ids" widget="many2one"/>
-            <field name="trabajadores_ids" widget="many2many"/>
             <field name="usuarios_ids" widget="many2one" />
         </tree>
     </field>
@@ -54,16 +60,14 @@
   </record>
 
  <!--Pivot-->
-
   <record id="municitic_incidencias_pivot_view" model="ir.ui.view">
     <field name="name">municitic.incidencias.pivot</field>
     <field name="model">municitic.incidencias</field>
     <field name="arch" type="xml" >
       <pivot string = "Incidencias" >
-        <!--<field name="name" type = "measure"/>-->
-        <field name = "activityType" type = "row" />
-        <field name = "trabajadores_ids" type ="colum" />
-        <field name = "start" type = "month" />
+        <field name = "nTrabajadores" type = "measure" />
+        <field name = "start" type ="row"/>
+        <field name = "activityType" type ="col" />
       </pivot>
     </field>
   </record>
@@ -75,7 +79,7 @@
   <record id="incidencias_list_action" model="ir.actions.act_window">
     <field name="name">Incidencias</field>
     <field name="res_model">municitic.incidencias</field>
-    <field name="view_mode">tree,form,calendar,pivot</field><!-- hay que agregar clase pivot cuando funcione-->
+    <field name="view_mode">tree,form,calendar,pivot</field>
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">Create the first class</p>
     </field>
