@@ -15,7 +15,6 @@ class Trabajadores(models.Model):
     citas_ids = fields.One2many("municitic.citas","trabajadores_ids","Cita confirmada")
     incidencias_ids = fields.Many2many("municitic.incidencias",string="Incidencias confirmados")
     tipotrabajador_ids = fields.Many2one("municitic.tipotrabajador",string="Tipo Trabajador confirmado")
-    #tipotrabajador_ids = fields.One2many("municitic.tipotrabajador","trabajadores_ids","Tipo Trabajador Confirmado")
     cursos_ids = fields.Many2many("municitic.cursos",string="Cursos confirmados")
 
     _sql_constraints = [('trabajadores_dni_unique','UNIQUE (dni)','El dni debe ser único')]
@@ -36,6 +35,3 @@ class Trabajadores(models.Model):
                     raise models.ValidationError('El dni debe tener una letra al final')
                 elif(subs.isdigit() == False):
                     raise models.ValidationError('El dni no debe contener números en los 8 primeros carácteres')
-                    
-                
-     

@@ -22,6 +22,8 @@
                 <field name="usuario" />
               </tree>
             </field>
+            <newline></newline>
+            <button name="btn_borrarUsuariosCita" string="Borrar Usuarios Cita" type="object" class="oe_highlight" />
           </group>
         </sheet>
       </form>

@@ -17,3 +17,6 @@ class Citas(models.Model):
     usuarios_ids = fields.Many2many("municitic.usuarios",string="Usuarios confirmados")
     trabajadores_ids = fields.Many2one("municitic.trabajadores",string="Trabajadores confirmados")
     valoraciones_ids = fields.One2many("municitic.valoraciones","citas_ids","Valoraciones confirmadas")
+    
+    def btn_borrarUsuariosCita(self):
+          self.write({'usuarios_ids':[(5,)]})
