@@ -1,30 +1,16 @@
 <odoo>
-    <data>
-<!--
-          <record id="object0" model="gym.gym">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
-          </record>
+  <record id="trabajador1" model="municitic.trabajadores">
+    <field name="name">Pepe</field>
+    <field name="dni">58465235L</field>
+  </record>
 
-          <record id="object1" model="gym.gym">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
-          </record>
+  <record id="trabajador2" model="municitic.trabajadores">
+    <field name="name">Antonio</field>
+    <field name="dni">96542165P</field>
+  </record>
 
-          <record id="object2" model="gym.gym">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
-          </record>
-
-          <record id="object3" model="gym.gym">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
-
-          <record id="object4" model="gym.gym">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
-          </record>
--->
-    </data>
+  <record id="trabajador3" model="municitic.trabajadores">
+    <field name="name">Devora</field>
+    <field name="dni">85642545K</field>
+  </record>
 </odoo>
