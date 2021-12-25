@@ -9,7 +9,7 @@
           <group>
             <field name="name" />
             <field name="description" />
-            <field name="asistentes" />
+            <field name="capacidad" />
             <field name="start" />
             <field name="end" />
             <field name="tipoCurso" />
@@ -33,7 +33,7 @@
       <tree string="tree_string">
         <field name="name" />
         <field name="description" />
-        <field name="asistentes" />
+        <field name="capacidad" />
         <field name="start" />
         <field name="end" />
         <field name="tipoCurso" />

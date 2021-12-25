@@ -26,3 +26,5 @@ class Usuarios(models.Model):
                 raise models.ValidationError('El dni debe tener una letra al final')
             elif(subs.isdigit() == False):
                 raise models.ValidationError('El dni no debe contener números en los 8 primeros carácteres')
+            
+    _sql_constraints = [('trabajadores_usuario_unique','UNIQUE (usuario)','El usuario debe ser único')]

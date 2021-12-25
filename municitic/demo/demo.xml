@@ -2,15 +2,18 @@
   <record id="trabajador1" model="municitic.trabajadores">
     <field name="name">Pepe</field>
     <field name="dni">58465235L</field>
+    <field name="usuario">pepe</field>
   </record>
 
   <record id="trabajador2" model="municitic.trabajadores">
     <field name="name">Antonio</field>
     <field name="dni">96542165P</field>
+    <field name="usuario">antonio</field>
   </record>
 
   <record id="trabajador3" model="municitic.trabajadores">
     <field name="name">Devora</field>
     <field name="dni">85642545K</field>
+    <field name="usuario">devora</field>
   </record>
 </odoo>
