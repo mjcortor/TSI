@@ -18,6 +18,8 @@ class Trabajadores(models.Model):
     cursos_ids = fields.Many2many("municitic.cursos",string="Cursos confirmados")
 
     _sql_constraints = [('trabajadores_dni_unique','UNIQUE (dni)','El dni debe ser único')]
+    
+    _sql_constraints = [('trabajadores_usuario_unique','UNIQUE (usuario)','El usuario debe ser único')]
 
     @api.depends('incidencias_ids')
     def _nIncidencias(self): 

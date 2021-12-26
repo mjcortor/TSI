@@ -29,7 +29,7 @@ class Cursos(models.Model):
                     'value': {'capacidad':10},
                     'warning': {
                          'title':'Valores incorrectos',
-                         'message':'Las cursos de informática no deben superar las 10 personas'
+                         'message':'Los cursos de informática no deben superar las 10 personas'
                     }
                }
                return resultado

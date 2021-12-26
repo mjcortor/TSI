@@ -14,6 +14,10 @@ class Usuarios(models.Model):
     citas_ids = fields.Many2many("municitic.citas",string="Cita confirmada")
     incidencias_ids = fields.One2many("municitic.incidencias","usuarios_ids","Incidencia confirmada")
     comunicados_ids = fields.Many2many("municitic.comunicados",string="Comunicado confirmado")
+    
+    _sql_constraints = [('usuarios_dni_unique','UNIQUE (dni)','El dni debe ser único')]
+    
+    _sql_constraints = [('usuarios_usuario_unique','UNIQUE (usuario)','El usuario debe ser único')]
 
     @api.constrains('dni')
     def _check_dni(self):
@@ -27,4 +31,4 @@ class Usuarios(models.Model):
             elif(subs.isdigit() == False):
                 raise models.ValidationError('El dni no debe contener números en los 8 primeros carácteres')
             
-    _sql_constraints = [('trabajadores_usuario_unique','UNIQUE (usuario)','El usuario debe ser único')]
+    

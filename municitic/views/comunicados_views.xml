@@ -6,11 +6,15 @@
     <field name="model">municitic.comunicados</field>
     <field name="arch" type="xml">
       <form string="Comunicados">
+        <header>
+          <button name="btn_generate_report" string="Generar comunicado" type="object" class="oe_highlight" />
+        </header>
         <sheet layout="auto">
           <group>
             <field name="name" />
             <field name="tipoComunicado" />
             <field name="emision" />
+            <field name="descripcion" />
             <field name="tipotrabajador_ids" widget="many2one" />
             <field name="valoraciones_ids" widget="many2one" />
           </group>

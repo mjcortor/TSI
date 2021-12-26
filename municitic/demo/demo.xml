@@ -16,4 +16,12 @@
     <field name="dni">85642545K</field>
     <field name="usuario">devora</field>
   </record>
+
+  <record id="comunicado1" model="municitic.comunicados">
+    <field name="name">Obras calle Estacada del Pozo</field>
+    <field name="descripcion">La calle Estacada del Pozo estará cortada
+    durante los próximos días por reparación de las cañerías</field>
+    <field name="tipoComunicado">noticia</field>
+    <field name="emision">2021-12-20</field>
+  </record>
 </odoo>

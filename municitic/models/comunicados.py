@@ -18,5 +18,8 @@ class Comunicados(models.Model):
     
     @api.constrains('name')
     def _check_name(self):
-        if len(self.name) > 25:
-            raise models.ValidationError('El título del comunicado no debe sobrepasar 25 carácteres')
+        if len(self.name) > 50:
+            raise models.ValidationError('El título del comunicado no debe sobrepasar 50 carácteres')
+        
+    def btn_generate_report(self):
+          return self.env.ref('municitic.report_comunicados').report_action(self)
