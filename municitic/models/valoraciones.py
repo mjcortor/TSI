@@ -6,7 +6,9 @@ class Valoraciones(models.Model):
     _name = 'municitic.valoraciones'
     _description = 'Municitic Valoraciones'
     name = fields.Char(string="Nombre", required=True, help="nombre de la valoracion")
-    valoracion = fields.Integer("Valoracion")
+    valoracion = fields.Selection([('1','1'),('2','2'),
+                                    ('3','3'),('4','4'),('5','5'),],
+                                    'Valoracion')
     comentario = fields.Text()
     
     citas_ids = fields.Many2one("municitic.citas",string="Citas confirmadas")
