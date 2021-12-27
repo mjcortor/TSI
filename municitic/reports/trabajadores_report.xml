@@ -1,0 +1,149 @@
+<odoo>
+    <template id="report_trabajadores">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">                    <!-- Probad tambien con web.internal_layout -->
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <div class="col-xs-2" style="margin: auto; text-align: center; border-right: 2px solid #FFFFFF;">
+                                <p>
+                                    <img t-if="not o.photo" t-att-src="'/web/static/src/img/placeholder.png'" height="120" border="1" width="120" />
+                                    <img t-if="o.photo" t-att-src="'data:image/png;base64,%s' % to_text(o.photo)" height="120" border="1" width="120" />
+                                </p>
+                                <p t-field="o.name" style="font-size: 14px; font-weight: bold; padding-left: 10px" />
+                            </div>
+                        <div class="row" style="font-size: 24px; padding-top: 30px; margin-bottom: 10px;">
+                            <span style="font-weight: bold; text-decoration: underline; ">DNI: </span>
+                            <span style="color: #999999;" t-field="o.dni" />
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-8" style="text-align: left; margin: auto; padding-left: 15px; padding-top: 10px;">
+                                <t t-foreach="o.tipotrabajador_ids" t-as="tipoTrabajador">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <p>
+                                                    <strong>DNI: </strong>
+                                                </p>
+                                                <p>
+                                                    <strong>NOMBRE: </strong>
+                                                </p>
+                                                <p>
+                                                    <strong>TIPO DE TRABAJADOR: </strong>
+                                                </p>
+                                            </td>
+                                            <td style="padding-left: 15px;">
+                                                <p t-field="o.dni" />
+                                                <p t-field="o.name" />
+                                                <p t-field="tipoTrabajador.name" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </t>
+                            </div>
+                        </div>
+                        <div t-if="o.citas_ids" class="row" style="margin-top: 40px; font-weight: bold; font-size: 19px;">
+                            Citas reservadas de <span t-field="o.name" />
+                        </div>
+                        <div t-if="o.citas_ids" id="citas_reservadas" class="row" style="margin-top: 10px;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Titulo</th>
+                                        <th>Inicio</th>
+                                        <th>Fin</th>
+                                        <th>Asistentes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.citas_ids" t-as="cita">
+                                        <tr>
+                                            <td>
+                                                <p t-field="cita.name" style="color: #3c3c3c;"/>
+                                            </td>
+                                            <td>
+                                                <p t-field="cita.start" style="color: #666666;"/>
+                                            </td>
+                                            <td>
+                                                <p t-field="cita.end" style="color: #3c3c3c;"/>
+                                            </td>
+                                            <td>
+                                                <p t-field="cita.asistentes" style="color: #666666;"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div t-if="o.incidencias_ids" class="row" style="margin-top: 20px; font-weight: bold; font-size: 19px;">
+                            Incidencias reservadas de <span t-field="o.name" />
+                        </div>
+                        <div t-if="o.incidencias_ids" id="incidencias_reservadas" class="row" style="margin-top: 10px;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Titulo</th>
+                                        <th>Inicio</th>
+                                        <th>Fin</th>
+                                        <th>Tipo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.incidencias_ids" t-as="incidencia">
+                                        <tr>
+                                            <td>
+                                                <p t-field="incidencia.name" style="color: #3c3c3c;"/>
+                                            </td>
+                                            <td>
+                                                <p t-field="incidencia.start" style="color: #666666;"/>
+                                            </td>
+                                            <td>
+                                                <p t-field="incidencia.end" style="color: #3c3c3c;"/>
+                                            </td>
+                                            <td>
+                                                <p t-field="incidencia.activityType" style="color: #666666;"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div t-if="o.cursos_ids" class="row" style="margin-top: 40px; font-weight: bold; font-size: 19px;">
+                            Cursos reservados de <span t-field="o.name" />
+                        </div>
+                        <div t-if="o.cursos_ids" id="cursos_reservados" class="row" style="margin-top: 10px;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Titulo</th>
+                                        <th>Inicio</th>
+                                        <th>Fin</th>
+                                        <th>Tipo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.cursos_ids" t-as="curso">
+                                        <tr>
+                                            <td>
+                                                <p t-field="curso.name" style="color: #3c3c3c;"/>
+                                            </td>
+                                            <td>
+                                                <p t-field="curso.start" style="color: #666666;"/>
+                                            </td>
+                                            <td>
+                                                <p t-field="curso.end" style="color: #3c3c3c;"/>
+                                            </td>
+                                            <td>
+                                                <p t-field="curso.tipoCurso" style="color: #666666;"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

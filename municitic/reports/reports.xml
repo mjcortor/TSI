@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <report id="action_municitic_report_trabajadores" string="Report" model="municitic.trabajadores" report_type="qweb-pdf" name="municitic.report_trabajadores" />
+
+    <report id="report_comunicados" string="Comunicados report" model="municitic.comunicados" report_type="qweb-pdf" name="municitic.report_comunicado" />
+
+</odoo>
+    

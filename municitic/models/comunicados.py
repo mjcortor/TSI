@@ -16,3 +16,10 @@ class Comunicados(models.Model):
     tipotrabajador_ids = fields.Many2one("municitic.tipotrabajador",string="Tipo Trabajador confirmado")
     valoraciones_ids = fields.Many2one("municitic.valoraciones",string="Valoraciones confirmadas")
     
+    @api.constrains('name')
+    def _check_name(self):
+        if len(self.name) > 50:
+            raise models.ValidationError('El título del comunicado no debe sobrepasar 50 carácteres')
+        
+    def btn_generate_report(self):
+          return self.env.ref('municitic.report_comunicados').report_action(self)
