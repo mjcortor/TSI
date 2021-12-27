@@ -24,4 +24,103 @@
     <field name="tipoComunicado">noticia</field>
     <field name="emision">2021-12-20</field>
   </record>
+
+  <record id="comunicado2" model="municitic.comunicados">
+    <field name="name">Actividades navideñas</field>
+    <field name="descripcion">Se organizarán actividades en la plaza del 
+    Ayuntamiento durante la semana de navidad</field>
+    <field name="tipoComunicado">actividad</field>
+    <field name="emision">2021-12-15</field>
+  </record>
+
+  <record id="cita1" model="municitic.citas">
+    <field name="name">Información Escuelas Deportivas</field>
+    <field name="asistentes">2</field>
+    <field name="start">2021-12-15 09:15:00</field>
+    <field name="end">2021-12-15 09:30:00</field>
+    <field name="tipoCita">pregunta</field>
+  </record>
+
+  <record id="cita2" model="municitic.citas">
+    <field name="name">Horario parques</field>
+    <field name="asistentes">1</field>
+    <field name="start">2021-12-19 16:30:00</field>
+    <field name="end">2021-12-19 16:45:00</field>
+    <field name="tipoCita">sugerencia</field>
+  </record>
+
+  <record id="incidencia1" model="municitic.incidencias">
+    <field name="name">Farola averiada</field>
+    <field name="ubicacion">Calle Pablo Picasso, 15</field>
+    <field name="activityType">urbanistico</field>
+    <field name="start">2021-11-15 20:30:00</field>
+    <field name="end">2021-11-21 09:30:00</field>
+    <field name="estado">resuelta</field>
+  </record>
+
+  <record id="incidencia2" model="municitic.incidencias">
+    <field name="name">Carretera en mal estado</field>
+    <field name="ubicacion">Calle Blanca Paloma</field>
+    <field name="activityType">trafico</field>
+    <field name="start">2021-11-05 15:30:00</field>
+    <field name="estado">encurso</field>
+  </record>
+
+  <record id="tipotrabajador1" model="municitic.tipotrabajador">
+    <field name="name">politico</field>
+  </record>
+
+  <record id="tipotrabajador2" model="municitic.tipotrabajador">
+    <field name="name">personal_laboral</field>
+  </record>
+
+  <record id="tipotrabajador3" model="municitic.tipotrabajador">
+    <field name="name">personal_eventual</field>
+  </record>
+
+  <record id="tipotrabajador4" model="municitic.tipotrabajador">
+    <field name="name">personal_funcionario</field>
+  </record>
+
+  <record id="usuario1" model="municitic.usuarios">
+    <field name="name">Manuel</field>
+    <field name="dni">85699521P</field>
+    <field name="usuario">manuel</field>
+  </record>
+
+  <record id="usuario2" model="municitic.usuarios">
+    <field name="name">Marina</field>
+    <field name="dni">88752365L</field>
+    <field name="usuario">marina</field>
+  </record>
+
+  <record id="usuario3" model="municitic.usuarios">
+    <field name="name">Andrea</field>
+    <field name="dni">25866231F</field>
+    <field name="usuario">andrea</field>
+  </record>
+
+  <record id="curso1" model="municitic.cursos">
+    <field name="name">Curso de informática</field>
+    <field name="capacidad">10</field>
+    <field name="start">2021-11-04</field>
+    <field name="end">2021-11-20</field>
+    <field name="tipoCurso">informatica</field>
+  </record>
+
+  <record id="curso2" model="municitic.cursos">
+    <field name="name">Curso de RRLL</field>
+    <field name="capacidad">30</field>
+    <field name="start">2021-12-01</field>
+    <field name="end">2021-12-16</field>
+    <field name="tipoCurso">riesgosLaborales</field>
+  </record>
+
+  <record id="curso3" model="municitic.cursos">
+    <field name="name">Aprendizaje básico Chino</field>
+    <field name="capacidad">25</field>
+    <field name="start">2021-11-15</field>
+    <field name="end">2021-12-05</field>
+    <field name="tipoCurso">idiomas</field>
+  </record>
 </odoo>
